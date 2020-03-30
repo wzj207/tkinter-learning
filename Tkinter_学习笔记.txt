@@ -1,0 +1,72 @@
+pip freeze
+
+列出需要安装的包：
+	
+
+pip freeze
+
+生成requirements.txt文件，
+	执行如下命令：
+
+pip freeze > requirements.txt
+
+
+	
+在env1生成安装要求，在env2安装，可以执行如下命令：
+
+	
+$ env1/bin/pip freeze > requirements.txt
+
+	
+$ env2/bin/pip install -r requirements.txt
+
+
+
+pip 列出所有需要更新的包：
+
+
+	pip list --outdate
+
+pip 
+
+更新所有需要更新的包：
+	
+
+pip freeze --local | grep -v '^-e' | cut -d = -f 1 | xargs -n1 pip install -U
+
+
+
+使用国内源安装：
+
+
+	pip install redis -i?https://pypi.tuna.tsinghua.edu.cn/simple
+
+????????
+		阿里云 https://mirrors.aliyun.com/pypi/simple/
+
+??
+		中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+
+??
+		豆瓣(douban) http://pypi.douban.com/simple/
+
+??
+		清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
+
+??
+		中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
+
+
+
+my_label.grid_forget()
+
+
+    delete_label = Label(root, text='Select ID')
+    delete_label.grid(row=9, column=0, pady=5)
+
+    delete_entry_box_editor = Entry(root, width=30)
+    delete_entry_box_editor.grid(row=9, column=1, pady=5)
+
+
+
+{'weatherinfo': {'city': '西安', 'cityid': '101110101', 'temp': '23.3', 'WD': '西南风', 'WS': '小于3级', 'SD': '52%', 'AP': '962.7hPa', 'njd': '暂无实况', 'WSE': '<3', 'time': '18:00', 'sm': '1.2', 'isRadar': '1', 'Radar': 'JC_RADAR_AZ9290_JB'}}
